@@ -13,5 +13,12 @@ class Banner extends Model
     const TYPE_BY_THEME = 1;
     const TYPE_BY_BOAT = 2;
 
+    protected $fillable = [
+        'type',
+        'image',
+        'name',
+        'price'
+    ];
+
 
 }

@@ -13,11 +13,11 @@ return new class extends Migration {
     public function up()
     {
         Schema::create('banners', function (Blueprint $table) {
-            $table->id('entity_id')->unique();
+            $table->id()->unique();
             $table->tinyInteger('type');
             $table->string('image');
             $table->string('name');
-            $table->decimal('price');
+            $table->decimal('price')->unsigned();
             $table->timestamps();
         });
     }
